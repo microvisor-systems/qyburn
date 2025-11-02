@@ -1,0 +1,11 @@
+* Qyburn
+
+Submitted to the [[https://uoquantum.com][Qiskit Fall Fest 2025]] @ University of Ottawa, Ontario
+
+| MODULE | PIN |
+|--------+-----|
+| 🔴     |   4 |
+| 🟢     |  26 |
+| 🔵     |  17 |
+| 🟡     |  21 |
+| 🦾     |     |
