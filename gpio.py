@@ -1,23 +1,19 @@
-import RPi.GPIO as GPIO
-import time
+from gpiozero import LED
+from time import sleep
 
-# Setup
-GPIO.setmode(GPIO.BCM)
-LED_PIN = 17
-GPIO.setup(LED_PIN, GPIO.OUT)
+# This works on ALL Raspberry Pi models including Pi 5!
+led = LED(17)
 
 try:
     while True:
-        GPIO.output(LED_PIN, GPIO.HIGH)  # LED ON
+        led.on()
         print("LED ON")
-        time.sleep(0.5)
+        sleep(1)
 
-        GPIO.output(LED_PIN, GPIO.LOW)  # LED OFF
+        led.off()
         print("LED OFF")
-        time.sleep(0.5)
+        sleep(1)
 
 except KeyboardInterrupt:
-    print("\nStopping...")
-
-finally:
-    GPIO.cleanup()
+    print("\nStopped!")
+    led.close()
