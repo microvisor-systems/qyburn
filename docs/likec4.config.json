@@ -1,0 +1,12 @@
+{
+  "$schema": "https://likec4.dev/schemas/config.json",
+  "name": "docs",
+  "title": "🛖 Platform","
+  styles": {
+    "theme": {
+      "colors": {
+        "yellow-600": "rgb(202 138 4)"
+      }
+    }
+  }
+}
