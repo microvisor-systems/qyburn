@@ -16,10 +16,11 @@
     };
 
     led = {
-      exec = "sudo python3 ${config.env.DEVENV_ROOT}/src/gpio.py";
+      exec = "sudo python3 ${config.env.DEVENV_ROOT}/src/firmware.py";
     };
+
     dev = {
-      exec = "uv run ${config.env.DEVENV_ROOT}/src/main.py";
+      exec = "uv run ${config.env.DEVENV_ROOT}/src/client.py";
     };
   };
 }

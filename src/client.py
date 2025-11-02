@@ -4,7 +4,7 @@ from collections import deque
 import colorsys
 import mido
 from mido import Message, MidiFile, MidiTrack
-from quantum_music_generator import QuantumMusicGenerator
+from server import QuantumMusicGenerator
 import threading
 import time
 
