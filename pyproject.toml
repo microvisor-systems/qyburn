@@ -1,0 +1,13 @@
+[project]
+name = "learn-qiskit"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.13"
+description = "Add your description here"
+dependencies = [
+          "qiskit",
+          "jupyter",
+          "matplotlib",
+          "qiskit-ibm-runtime",
+          "qiskit[visualization]"
+          ]
