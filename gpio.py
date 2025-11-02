@@ -8,7 +8,7 @@ import gpiod
 import time
 
 # Configuration
-CHIP_NAME = "gpiochip4"  # Pi 5 uses gpiochip4
+CHIP_NAME = "gpiochip0"  # Pi 5 uses gpiochip4
 LED_PIN = 26  # GPIO 26
 
 # Open GPIO chip
