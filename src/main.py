@@ -7,10 +7,7 @@ from qiskit_ibm_runtime import QiskitRuntimeService
 token = os.getenv("IBM_QUANTUM_API_TOKEN")
 instance = os.getenv("IBM_QUANTUM_CRN")
 
-# QiskitRuntimeService.save_account(
-#     token=token,
-#     instance=instance
-# )
+# QiskitRuntimeService.save_account(token=token, instance=instance)
 
 service = QiskitRuntimeService()
 
