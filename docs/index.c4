@@ -1,0 +1,177 @@
+specification {
+    element context {
+        notation "Context"
+    }
+    element container {
+        notation "Container"
+    }
+    element component {
+        notation "Component"
+    }
+    element code {
+        notation "Code"
+    }
+}
+
+model {
+
+    ecosystem = context "Ecosystem" {
+        icon  https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg
+        link https://ibm.com/quantum/qiskit "Website"
+
+        style {
+            color gray
+            opacity 40%
+        }
+
+    }
+
+    platform = context "Platform" {
+        link https://ibm.com/quantum/qiskit "Website"
+        icon https://avatars.githubusercontent.com/u/30696987?s=200&v=4
+        style {
+            color indigo
+            opacity 40%
+        }
+
+workflow = container "Workflow" {
+clearly-identify-and-define-problem = code "Clearly Identify and Define Problem" { style {color red} }
+map-problem = code "Map Problem to Quantum-Native Format" { style {color amber} }
+optimize-circuits-and-operators = code "Optimize Circuits and Operators" {style {color indigo}}
+execute-using-quantum-primitive-function = code "Execute using Quantum Primitive function" {style {color secondary}}
+analyze-results = code "Analyze Results" {style {color green}}
+}
+
+    quantum-mechanics = component "Quantum Mechanics" {
+      link https://en.wikipedia.org/wiki/Quantum_mechanics "Wikipedia"
+      style {
+        color green
+        shape person
+      }
+    }
+
+tech-stack = container "Tech Stack" {
+      style {
+        color indigo
+        opacity 45%
+      }
+
+    languages = container "Languages" {
+      style {
+      color sky
+      }
+
+        nix = component "Nix" {
+            icon tech:nix
+            link https://nixos.org "Website"
+            style {
+                color: slate
+            }
+        }
+
+    python = component "Python" {
+      icon tech:python
+      link https://www.python.org "Website"
+      style {
+      color sky
+      }
+    }
+
+    openqasm = component "OpenQASM" {
+      link https://openqasm.com "Website"
+      style {
+      color indigo
+      }
+    }
+    }
+
+simulators = container "Simulators" {
+link https://quantum.cloud.ibm.com/docs/en/guides/local-simulators
+
+fake-backends = component "Fake Backends" {style {color gray}}
+aer-simulator = component "AerSimulator" {
+link https://qiskit.github.io/qiskit-aer/stubs/qiskit_aer.AerSimulator.html
+style {color secondary}}
+clifford-simulation = component "Clifford Simulation" {style {color primary}}
+}
+
+    frameworks = container "Frameworks" {
+      style {
+      color sky
+      }
+
+        devenv = component "Devenv" {
+            link https://devenv.sh "Website"
+            icon https://raw.githubusercontent.com/cachix/devenv/85e78cbe26467a2c23c9d34869235740132d749f/logos/devenv-dark-bg.svg
+            style {
+                color: gray
+            }
+        }
+
+ibm = container "IBM" {
+style {
+opacity 50%
+}
+    ibm-quantum-platform = component "IBM Quantum Platform" {
+    icon https://quantum.cloud.ibm.com/favicon.ico
+    style {
+    color indigo
+    shape browser
+}
+}
+
+    qiskit = component "Qiskit" {
+        link https://ibm.com/quantum/qiskit "Website"
+        icon https://avatars.githubusercontent.com/u/30696987?s=200&v=4
+        style {
+            color indigo
+            shape queue
+        }
+    }
+}
+
+    }
+}
+
+    }
+
+ecosystem -> platform
+}
+
+views {
+    view index {
+        title: "System Context"
+        description: '''
+          **Top Level** overview.
+          '''
+        include *
+    }
+
+    view platform of platform {
+        title: "Platform"
+        include *
+        include tech-stack.**
+    }
+
+    view ecosystem of ecosystem {
+        title: "Ecosystem"
+        include *
+    }
+
+dynamic view workflow {
+title "Workflow"
+clearly-identify-and-define-problem -> map-problem {
+notes '''
+|Term | Definition|
+|-|-|
+| **Quantum Circuits**  | Native Quantum instructions representation format |
+| **Operators** | Represent the observables to be measured |
+
+Add instructions in sequence to a `QuantumCircuit` object.
+'''
+}
+map-problem -> optimize-circuits-and-operators
+optimize-circuits-and-operators -> execute-using-quantum-primitive-function
+execute-using-quantum-primitive-function -> analyze-results
+}
+}
