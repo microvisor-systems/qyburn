@@ -15,6 +15,9 @@
       exec = "pnpx likec4 start ${config.env.DEVENV_ROOT}/docs";
     };
 
+    led = {
+      exec = "sudo python3 ${config.env.DEVENV_ROOT}/src/gpio.py";
+    };
     dev = {
       exec = "uv run ${config.env.DEVENV_ROOT}/src/main.py";
     };
