@@ -1,5 +1,5 @@
 from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister, transpile
-from qiskit_aml import AerSimulator
+from qiskit_aer import AerSimulator
 from qiskit.visualization import plot_histogram
 import numpy as np
 from collections import Counter
