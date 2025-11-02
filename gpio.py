@@ -1,8 +1,7 @@
 from gpiozero import LED
 from time import sleep
 
-# This works on ALL Raspberry Pi models including Pi 5!
-led = LED(17)
+led = LED(26)
 
 try:
     while True:
