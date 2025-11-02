@@ -4,6 +4,7 @@ from collections import deque
 import colorsys
 import mido
 from mido import Message, MidiFile, MidiTrack
+from quantum_music_generator import QuantumMusicGenerator
 import threading
 import time
 
@@ -730,7 +731,7 @@ if __name__ == "__main__":
     # demo_patterns()
 
     # Custom numbers - YOUR ARRAY HERE!
-    my_numbers = [1, 3, 5, 7, 9, 11, 13, 11, 9, 7, 5, 3, 1]
+    # my_numbers = [1, 3, 5, 7, 9, 11, 13, 11, 9, 7, 5, 3, 1]
 
     # Try different methods:
     # 'melodic' - Musical notes (nice melodies)
@@ -738,8 +739,21 @@ if __name__ == "__main__":
     # 'chord' - Harmonies (richer sound)
     # 'wave' - Different waveforms (varied timbres)
 
-    custom_numbers_visualizer(my_numbers, method="melodic", duration=0.4)
+    # custom_numbers_visualizer(my_numbers, method="melodic", duration=0.4)
 
     # Or try other patterns:
     # custom_numbers_visualizer([i**2 % 20 for i in range(25)], method='chord', duration=0.3)
     # custom_numbers_visualizer(list(range(1, 25)), method='wave', duration=0.2)
+
+    # Create quantum music generator
+    qm = QuantumMusicGenerator(shots=1024)
+    
+    # Generate quantum notes
+    quantum_notes = qm.entangled_melody(num_qubits=4, num_notes=25)
+    
+    # Visualize
+    custom_numbers_visualizer(quantum_notes, method="melodic", duration=0.3)
+    
+    # Or try different patterns:
+    # quantum_notes = qm.qft_harmony(num_qubits=5, num_notes=30)
+    # custom_numbers_visualizer(quantum_notes, method="chord", duration=0.25)
