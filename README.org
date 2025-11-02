@@ -1,6 +1,9 @@
+[[./assets/qyburn-symbol.svg]]
+
 * Qyburn
 
-Submitted to the [[https://uoquantum.com][Qiskit Fall Fest 2025]] @ University of Ottawa, Ontario
+Submitted to the [[https://uoquantum.com][Qiskit Fall Fest 2025]] @ [[https://www.uottawa.ca/en][University of Ottawa]], Ontario.
+
 
 | MODULE | PIN |
 |--------+-----|
