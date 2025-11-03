@@ -18,4 +18,4 @@ A simple quantum-powered music concert experience that turns quantum computation
 **Try it out:**
 Run =python src/server.py= to see quantum music generation in action, or =python src/client.py= for the full audio-visual experience.
 
-Submitted to the [[https://uoquantum.com][Qiskit Fall Fest 2025]] @ [[https://www.uottawa.ca/en][University of Ottawa]], Ontario by Quotify - Surya Vasudev, Marcel Traore, and Mumtahin Farabi.
+Submitted to the [[https://uoquantum.com][Qiskit Fall Fest 2025]] @ [[https://www.uottawa.ca/en][University of Ottawa]], Ontario by Quotify - [[https://www.linkedin.com/in/surya-vasudev/][Surya Vasudev]], [[https://www.linkedin.com/in/marcel-traore-048839289/][Marcel Traore]], and [[https://www.linkedin.com/in/mfarabi/][Mumtahin Farabi]].
